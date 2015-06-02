@@ -469,13 +469,7 @@ jQuery(document).ready(function() {
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 	 	 $('.selectionBlock').addClass('selectionBlockHover2');
 	 	 $('.selectionBlock').removeClass('selectionBlockNormal');
-
 	 	 $('.hexagonMail').remove();
-
-	 	 // $('.header').removeClass('headerShrink');
-
-	 	 // $('.main').addClass('mainMobile');
-
 	}
 
 });

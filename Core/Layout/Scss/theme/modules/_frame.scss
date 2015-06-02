@@ -154,12 +154,6 @@
 	}
 }
 
-.mainMobile{
-	@include mq($bp3){
-		@include margin-tb(0,0);
-	}
-}
-
 .main-default, .main-default-inner {
 	min-height: 50%;
 }
