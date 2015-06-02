@@ -1,0 +1,165 @@
+//
+// About
+//
+
+
+.aboutBlock {
+ 	
+ 	.row {
+ 		@include margin-tb(1,0);
+ 		
+ 		@include mq($bp3){
+	 		@include margin-tb(3,6);
+ 		}
+
+ 	}
+ 	
+
+ 	.block12 {
+
+ 		@include mq($bp3){
+	 		width: 55%; 			
+ 		}
+
+ 		@include mq($bp4) {
+ 			width: 45%;
+ 		}
+ 	}
+}
+
+
+
+#contentSelector {
+	position: relative;
+
+}
+
+.selectContent2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+
+#logoSwitch {
+	display: none;
+
+	@include mq($bp3){
+		display: block;
+		width: 35%;
+	}
+
+	@include mq($bp4) {
+		width: 45%;
+	}
+}
+
+.logoSwitchHolder {
+	width: 100%;
+	position: relative;
+
+	.image1 {
+		@include margin-tb(7,0);
+		position: relative;
+	}
+
+	.image2 {
+		position: absolute;
+		top: 0;
+	}
+}
+
+.selectProjectButton {
+	cursor: pointer;
+	background-color: $delta-ui-color;
+	border: 2px solid $beta-ui-color;
+	color: $beta-ui-color;
+	@include padding-tb(0.5,0.5);
+	@include px-padding-lr(2,2);
+	border-radius: $radius;
+	text-align: center;
+	width: 45%;
+	margin-right: 5%;
+	float: left;
+
+	p {
+		width: 100%;
+		text-align: center;
+	}
+
+	@include margin-tb(0.75,0.5);
+
+	@include mq($bp3){
+		float: inherit;
+		width: 90%;
+		margin-left: 5%;	
+		margin-right: 0;
+	}
+
+	@include mq($bp4) {
+		width: 60%;	
+		margin-left: 20%;
+	}
+}
+
+.selectProjectButton:last-child {
+	margin-right: 0;
+}
+
+#selectProject {
+	width: 100%;
+	@include margin-tb(0,1);
+
+	@include mq($bp3){
+		width: 35%;
+	}
+
+	@include mq($bp4) {
+		width: 45%;
+	}
+}
+
+
+
+#selectProject1 {
+
+	@include mq($bp3){
+		@include margin-tb(5.8,0);
+	}
+}
+
+.selectedProject {
+	background-color: $beta-ui-color;
+	color: $delta-ui-color;
+}
+
+#selectLogo {
+	display: none;
+
+	@include mq($bp3){
+		display: block;
+		width: 35%;
+	}
+
+	@include mq($bp4) {
+		width: 45%;
+	}
+	
+}
+
+.selectLogoHolder {
+	position: relative;
+	width: 90%;
+	@include margin-tb(6,0);
+
+	.selectLogoImage {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+
+	.selectLogoImage:first-child {
+		position: relative;
+	}
+}

@@ -1,0 +1,629 @@
+// 
+// Blocks
+//
+
+.blockContent {
+	@extend %clearfix;
+	overflow: hidden;
+	position: relative;
+	border: 2px solid $delta-ui-color;
+
+	h2 {
+		color: $beta-ui-color;
+	}
+
+	.row {
+		text-align: center;
+		@include margin-tb(2,4);
+
+	}
+}
+
+.block12 {
+	float: left;
+	@include margin-tb(0,2);
+
+	@include mq($bp3){
+		@include margin-tb(0,0);
+		width: 45%;
+		margin-right: 10%;
+	}
+
+	h2 {
+		color: $beta-ui-color;
+		text-align: center;
+		@include padding-tb(0,0);
+		
+		@include mq($bp3){
+			text-align: left;			
+		}
+	}
+
+	p {
+		text-align: justify;
+	}
+}
+
+.block12:last-child {
+	@include margin-tb(0,0);
+	margin-right: 0;
+}
+
+.block13 {
+	width: 33.33%;
+	border-left: 2px solid $delta-ui-color;
+	position: absolute;
+	left: 0;
+	border-right: 2px solid$delta-ui-color;
+
+}
+
+.block23 {
+	@include padding-tb(2,2);
+	float: right;
+	width: 66.66%;
+	border-right: 2px solid $delta-ui-color;
+	border-left: 2px solid $delta-ui-color;
+	background-color: $epsilon-ui-color;
+	text-align: center;
+
+	@include mq($bp3){
+		@include padding-tb(3,3);
+	}
+
+	p {
+		font-weight: $gamma-font-weight; 
+		font-family: $beta-font-family;
+		font-size: 1.6em;
+		line-height: 2.2em;
+		@include px-padding-lr(2,2);
+
+		@include mq($bp3){
+			font-size: 1.8em;
+			line-height: 2.2em;
+			@include px-padding-lr(6,6);
+		}
+
+		a {
+			z-index: 99;
+			font-size: 0.7em;
+			transition: 0.2s;
+			@extend %hexagon-button;
+			@include mq($bp3){
+				font-size: 0.6em;
+			}
+		}
+
+		a:before, a:after {
+			@extend %hexagon-button-before-after;
+		}
+
+		a:before {
+
+			@extend %hexagon-button-before;
+		}
+
+		a:after {
+			@extend %hexagon-button-after;
+		}
+
+		a:hover {
+			@extend %hexagon-button-hover;
+		}
+
+		a:before:hover, a:after:hover {
+			@extend %hexagon-button-over-before-after;
+		}
+	}
+
+	p:first-child {
+		@include margin-tb(0,1);	
+	}
+}
+
+.block23Left {
+	width: 66.66%;
+	float: left; 
+	height: 400px;
+}
+
+.block13Right {
+	width: 33.33%;
+	height: 400px;
+	float: right;
+	padding-left: 2em;
+
+	@include mq($bp4){
+		padding-left: 3em;
+	}
+
+	@include mq($bp5) {
+		padding-left: 5em;
+
+	}
+
+	h2 {
+		color: $beta-ui-color;
+		@include padding-tb(0,0);
+	}
+
+	p {
+		font-family: $beta-font-family;
+		font-size: 1.1em;
+		font-weight: $gamma-font-weight;
+		@include padding-tb(0.8,0);
+
+		@include mq($bp4){
+			font-size: 1.4em;
+		}
+	}
+}
+ 
+.blueBlock {
+	@extend %clearfix;
+	text-align: center;
+	color: $delta-ui-color;
+	background-color: $beta-ui-color;
+	border-top: 2px solid $delta-ui-color;
+	border-bottom: 2px solid $delta-ui-color;
+	@include padding-tb(1.5,3);
+
+	a {
+
+	}
+	.text {
+		font-family: $beta-font-family;
+		font-weight: $gamma-font-weight;
+
+		p {
+			font-size: 1.4em;
+			line-height: 2.4em;
+			@include margin-tb(0,0.5);
+		}
+	
+		ul {	
+			list-style-type: none;
+			height: 100px;
+		    position: relative;
+	  		margin: 0;
+	  		padding: 0;
+	  		overflow: hidden;
+	  		width: 100%;
+		}
+
+		li {
+			font-size: 1.4em;
+			line-height: 2.4em;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+		}
+	}
+}
+
+//
+// Bullets
+//
+
+.bullets {
+	list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+    @include margin-tb(1,0);
+}
+
+.bullet {
+	cursor: pointer;
+	border-radius: 50%;
+	width: 15px;
+	height: 15px; 
+	border: 1px solid $delta-ui-color;
+	margin-right: 25px;
+ 	display:inline-block;
+}
+
+.bullet:last-child {
+	margin-right: 0px;
+}
+
+.bulletSelected {
+	background-color: $delta-ui-color;	
+	transition: 0.4s;
+}
+
+.bulletNotSelected {
+	background-color: transparent;	
+	transition: 0.4s;
+}
+
+
+
+//
+// Header
+//
+
+
+.mainHeader {
+ 	position: relative;
+ 	overflow: hidden;
+ 	@include mq($bp3){
+	 	height: 400px;
+ 	}
+
+ 	h1 {
+
+
+ 		font-size: 1.6em;
+
+		@include mq($bp3){
+			font-size: 2.7em;
+		}
+ 	}
+
+ 	.time {
+		font-weight: $gamma-font-weight;
+		font-size: 1em;
+		@include margin-tb(0,0.5);
+ 	}
+
+ 	.loaded {
+	 	img {
+			max-width: none;
+	 		width: 200%;
+	 		margin-left: -50%;
+
+	 		@include mq($bp2){
+	 			width: 160%;
+	 			margin-left: -30%;	
+	 		}
+	 		
+
+	 		@include mq($bp3){
+	 			width: 100%;
+	 			margin-left: 0;
+	 		}
+	 		 		
+
+	 		@include mq($bp5) {
+	 			margin-top: -100px;
+	 		}
+	 	}
+	 }
+}
+
+//
+// IMG LEFT
+//
+
+.mainHeaderImgLeft {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -99;
+	width: 100%;
+	max-width: none;
+}
+
+.mainHeaderTextRight {
+	@include padding-tb(0,1);
+	text-align: right;
+	z-index: 99;
+	height: 100%;
+	@include background-opacity($delta-ui-color, 0.9);
+
+
+	@include mq($bp3){
+
+		@include gradient-white-rl-horizontal(60%);
+		@include background-opacity($delta-ui-color, 0);
+	}
+
+	h1 {
+		color: $beta-ui-color;
+		padding-bottom: 0.2em;
+	}
+
+	ul {
+		list-style-type: none;
+		font-family: $beta-font-family;
+		// margin-right: 1.2em;
+
+		a,  a:active, a:visited {
+			color: $beta-ui-color;
+			text-decoration: none;
+			opacity: 1;
+			transition: 0.4s;
+		}
+
+		a:hover {
+			// color: darken($beta-ui-color,10);
+			opacity: 0.7;
+		}
+
+		li {
+			font-size: 1.4em;
+			font-weight: $gamma-font-weight;
+			@include padding-tb(0.3,0);
+
+			img {
+				width: 22px;
+				padding-top: 0.5em;
+				margin-left: 0.6em;
+			}
+		}
+	}
+}
+
+
+//
+// IMG RIGHT
+//
+
+.mainHeaderTextLeft {
+	@include padding-tb(0,1.5);
+	text-align: left;
+	z-index: 99;
+	height: 100%;
+	@include background-opacity($delta-ui-color,0.9);
+
+	@include mq($bp3){
+		@include padding-tb(0,0);
+		@include background-opacity($delta-ui-color,0);
+		@include gradient-white-lr-horizontal-small(rgba(255,255,255,0.95));
+	}
+
+	@include mq($bp4) {
+		@include gradient-white-lr-horizontal(rgba(255,255,255,0.95));
+	}
+
+	h1 {
+		color: $beta-ui-color;
+		padding-bottom: 0.2em;
+		
+	}
+
+	p {
+		font-family: $beta-font-family;
+		font-size: 1.2em;
+		font-weight: $gamma-font-weight;
+		@include padding-tb(0.3,0);
+
+		@include mq($bp3){
+			width: 75%;
+			font-size: 1.4em;
+		}
+
+		@include mq($bp4) {
+			width: 60%;
+		}
+	}
+
+	ul {
+		display: none;
+		list-style-type: none;
+		font-family: $beta-font-family;
+		padding: 0;
+		@include margin-tb(1,0);
+
+		@include mq($bp3){
+			display: block;
+		}
+
+		a,  a:active, a:visited {
+			color: $beta-ui-color;
+			text-decoration: none;
+			opacity: 1;
+			transition: 0.4s;
+		}
+
+		a:hover {
+			opacity: 0.7;
+		}
+
+		li {
+			font-size: 1.2em;
+			font-weight: $gamma-font-weight;
+			@include padding-tb(0.3,0);
+			float: left; 
+			margin-left: 0.2em;
+		}
+
+		li:after {
+			content: "  -";
+		}
+
+		li:last-child:after {
+			content: "";
+			margin-right: 0;
+		}
+
+		li:first-child {
+			margin-left: 0;
+		}
+	}
+}
+
+.mainHeaderImgRight {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: -99;
+	max-width: none;
+	width: 100%;
+}
+
+
+
+
+//
+// Overflow 1OO% block (vb onze diensten)
+//
+
+.blockOHContent {
+	overflow: hidden;
+	position: relative;
+
+	@include mq($bp3){
+		height: 550px;
+	}
+}
+
+
+.blockOHImg {
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: -99;
+	width: 100%;
+
+	img {
+		max-width:none;
+		width: 300%;
+		margin-left: -100%;
+
+		@include mq($bp2){
+			width: 250%;
+			margin-left: -80%;
+		}
+		
+		@include mq($bp3){
+			width: 140%;
+			margin-left: -30%;
+		}
+	
+		@include mq($bp4){
+			width: 100%;
+			margin-left: 0;
+		}
+	}
+}
+
+.blockOHText {
+	height: 100%;
+	z-index: 99;
+	@include padding-tb(0,2);
+
+	p {
+		@include padding-tb(0.1,0);
+		width: 100%;
+		color: $delta-ui-color;
+		font-size: 1.2em;
+		font-weight: $alpha-font-weight;
+		font-family: $beta-font-family;
+		line-height: 1.6em;
+
+		@include mq($bp3){
+			@include padding-tb(0.1,0.3);
+			font-weight: $gamma-font-weight;
+			width: 80%;
+			line-height: 1.8em;
+			font-size: 1.4em;
+		}
+
+		@include mq($bp4){
+			width: 66%;
+			@include padding-tb(0.1,0.5);
+			line-height: 2em;
+		}
+	}
+
+	@include mq($bp3){
+		@include padding-tb(1.5,0);
+	}
+	a {
+		width:190px;
+		z-index: 99;
+		font-size: 0.9em;
+		transition: 0.2s;
+		@extend %hexagon-button2;
+	}
+
+	a:before, a:after {
+		@extend %hexagon-button2-before-after;
+		width:190px;
+	}
+
+	a:before {
+
+		@extend %hexagon-button2-before;
+	}
+
+	a:after {
+		@extend %hexagon-button2-after;
+	}
+
+	a:hover {
+		@extend %hexagon-button2-hover;
+	}
+
+	a:before:hover, a:after:hover {
+		@extend %hexagon-button2-over-before-after;
+	}
+}
+
+
+.blockOHContent:nth-child(2) {
+	
+	.blockOHText {
+		@include background-opacity($blue1,0.9);
+
+		@include mq($bp3){
+			@include background-opacity($delta-ui-color,0);
+			@include gradient-OHContent(rgba(0,141,178,0.95));  
+		}
+
+	}
+}
+
+.blockOHContent:nth-child(3) {
+	
+	.blockOHText {
+		@include background-opacity($blue2,0.9);
+
+		@include mq($bp3){
+			@include background-opacity($delta-ui-color,0);
+			@include gradient-OHContent(rgba(49,177,198,0.95));
+		}  
+	}
+}
+
+.blockOHContent:nth-child(4) {
+	
+	.blockOHText {
+		@include background-opacity($blue3,0.9);
+
+		@include mq($bp3){
+			@include background-opacity($delta-ui-color,0);
+			@include gradient-OHContent(rgba(7,102,177,0.95));  
+		}
+	}
+}
+
+.blockOHContent:nth-child(5) {
+	
+	.blockOHText {
+		@include background-opacity($blue4,0.9);
+
+		@include mq($bp3){
+			@include background-opacity($delta-ui-color,0);
+			@include gradient-OHContent(rgba(34,145,194,0.95));  
+		}
+	}
+}
+
+.blockOHContent:nth-child(6) {
+	
+	.blockOHText {
+		@include background-opacity($blue5,0.9);
+
+		@include mq($bp3){
+			@include background-opacity($delta-ui-color,0);
+			@include gradient-OHContent(rgba(16,182,211,0.95));  
+		}
+	}
+}
+
+
+
+
