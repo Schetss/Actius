@@ -123,11 +123,15 @@
 	@include padding-tb(0.5,1);
 
 	@include mq($bp3){
-		height: 275px;
+		height: 300px;
 
 		p {
 			text-align: justify;
 		}
+	}
+
+	@include mq(1000px){
+		height: 275px;
 	}
 
 	a, a:hover, a:visited, a:active {
