@@ -166,6 +166,13 @@
 #blogDetail {
 	.articleContent {
 
+		a, a:hover, a:visited, a:active {
+ 			text-decoration: none;
+ 			color: $alpha-ui-color;
+
+ 		}
+ 
+
 		@include margin-tb(2,4);
 
 		@include mq($bp3){
