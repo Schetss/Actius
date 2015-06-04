@@ -6,6 +6,14 @@
 .aboutBlock {
  	
  	.row {
+ 		
+ 		a, a:hover, a:visited, a:active {
+ 			text-decoration: none;
+ 			color: $alpha-ui-color;
+ 			font-weight: $beta-font-weight;
+
+ 		}
+
  		@include margin-tb(1,0);
  		
  		@include mq($bp3){
