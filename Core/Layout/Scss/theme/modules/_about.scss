@@ -9,7 +9,7 @@
  		@include margin-tb(1,0);
  		
  		@include mq($bp3){
-	 		@include margin-tb(3,6);
+	 		@include margin-tb(3,4);
  		}
 
  	}
@@ -21,9 +21,9 @@
 	 		width: 55%; 			
  		}
 
- 		@include mq($bp4) {
- 			width: 45%;
- 		}
+ 		// @include mq($bp4) {
+ 		// 	width: 45%;
+ 		// }
  	}
 }
 
@@ -49,9 +49,9 @@
 		width: 35%;
 	}
 
-	@include mq($bp4) {
-		width: 45%;
-	}
+	// @include mq($bp4) {
+	// 	width: 45%;
+	// }
 }
 
 .logoSwitchHolder {
@@ -96,10 +96,10 @@
 		margin-right: 0;
 	}
 
-	@include mq($bp4) {
-		width: 60%;	
-		margin-left: 20%;
-	}
+	// @include mq($bp4) {
+	// 	width: 60%;	
+	// 	margin-left: 20%;
+	// }
 }
 
 .selectProjectButton:last-child {
@@ -114,9 +114,9 @@
 		width: 35%;
 	}
 
-	@include mq($bp4) {
-		width: 45%;
-	}
+	// @include mq($bp4) {
+	// 	width: 45%;
+	// }
 }
 
 
@@ -141,9 +141,9 @@
 		width: 35%;
 	}
 
-	@include mq($bp4) {
-		width: 45%;
-	}
+	// @include mq($bp4) {
+	// 	width: 45%;
+	// }
 	
 }
 
