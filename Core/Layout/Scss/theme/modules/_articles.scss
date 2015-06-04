@@ -87,26 +87,18 @@
 
 .post:nth-child(2n) {
 	@include mq($bp3){
-		margin-right: 0;
-	}
-
-	@include mq($bp4){
-		margin-right: 2%;
+		@media (max-width: $bp4) {
+			margin-right: 0;
+		}
 	}
 }
 
 
 .post:nth-child(3n) {
-	@include mq($bp3){
-		margin-right: 6%;
-	}
-
 	@include mq($bp4){
-		margin-right: 0;
-	}
-
-	@include mq($bp6){
-		margin-right: 2%;
+		@media (max-width: $bp6) {
+			margin-right: 0;
+		}
 	}
 }
 
