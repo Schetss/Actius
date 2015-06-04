@@ -158,62 +158,37 @@
 			color: $beta-ui-color;
 		}
 	}
-
-
 }
 
 
 .member:nth-child(2n) {
 
 	@include mq($bp2){
-		margin-right: 0;
-	}
-
-	@include mq($bp3){
-		width: 26%;
-		margin-right: 11%;
-	}
-
-	@include mq($bp4){
-		width: 20%;
-		margin-right: 6.66%;
+		@media (max-width: $bp3) {
+			margin-right: 0;
+		}
 	}
 }
 
 .member:nth-child(3n) {
-
-	@include mq($bp2){
-		width: 45%;
-		margin-right: 10%;
-	}
-
 	@include mq($bp3){
-		width: 26%;
-		margin-right: 0;
-	}
-
-	@include mq($bp4){
-		width: 20%;
-		margin-right: 6.66%;
+		@media (max-width: $bp4) {
+			width: 26%;
+			margin-right: 0;
+		}
 	}
 }
 
 .member:nth-child(4n) {
-
-	@include mq($bp2){
-		width: 45%;
-		margin-right: 10%;
-	}
-
-	@include mq($bp3){
-		width: 26%;
-		margin-right: 0;
-	}
-
 	@include mq($bp4){
 		width: 20%;
 		margin-right: 0;
 	}
+}
+
+
+.member:nth-child(2) {
+
 }
 
 
