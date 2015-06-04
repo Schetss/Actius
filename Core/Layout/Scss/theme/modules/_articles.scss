@@ -6,6 +6,22 @@
 	@include margin-tb(3,1);
 	@extend %clearfix;
 	@include px-margin-lr(2,2);
+
+	.post:nth-child(3) {
+		display: none; 
+
+		@include mq($bp4){
+			display: block;
+		}
+
+	}
+	.post:nth-child(4){
+		display: none;
+
+		@include mq($bp6){
+			display: block;
+		}
+	}
 }
 
 
