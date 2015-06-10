@@ -8,7 +8,7 @@
 			<div class="postTop imgWrapper">
 				{option:items.image}
 				<p>
-					<img alt="article_image" <img src="{$FRONTEND_FILES_URL}/blog/images/400x400/{$items.image}" onload="imgLoaded(this)"/>
+					<img alt="article_image" src="{$FRONTEND_FILES_URL}/blog/images/400x400/{$items.image}" onload="imgLoaded(this)"/>
 				</p>
 				{/option:items.image}
 			</div>
