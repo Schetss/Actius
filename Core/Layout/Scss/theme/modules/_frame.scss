@@ -174,7 +174,7 @@ p {
 }
 
 .back-to-top {
-	@include svg-bg("../Img/backtotop", ".png", transparent, 10%, no-repeat, 3.5em);
+	@include svg-bg("../img/backtotop", ".png", transparent, 10%, no-repeat, 3.5em);
 	margin-bottom: 10px;
 	margin-right: 10px;
 	position: fixed;
