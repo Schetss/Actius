@@ -231,13 +231,13 @@
 
 			@include mq($bp2){
 				line-height: 500%;
-
 			}
 
-			@include mq($bp3) {
+			@include mq($bp4) {
 				line-height: 800%;
 				font-weight: $gamma-font-weight;
 			}
+
 
 			
 		}
